@@ -1,32 +1,23 @@
 package main
 
 import (
-	"log"
+	"fmt"
 	"time"
 )
 
-func rotina(ch chan int){
-	time.Sleep(time.Second)
-	//println aleatorio
+func rotina(ch chan int) {
 	ch <- 1
 	ch <- 2
 	ch <- 3
 	ch <- 4
-	log.Println("Executou!")
 	ch <- 5
+	fmt.Println("Executou!")
 	ch <- 6
 }
 
-func main(){
+func main() {
 	ch := make(chan int, 3)
-
 	go rotina(ch)
-	//time.Sleep(time.Second)
-	//println aleatorio
-	log.Println(<-ch)
-	log.Println(<-ch)
-	log.Println(<-ch)
-	log.Println(<-ch)
-	log.Println(<-ch)
-	log.Println(<-ch)
+	time.Sleep(time.Second)
+	fmt.Println(<-ch)
 }
