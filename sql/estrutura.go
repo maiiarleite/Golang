@@ -14,7 +14,7 @@ func exec(db *sql.DB, sql string) sql.Result {
 }
 
 func main() {
-	db, err := sql.Open("mysql", "root:12345@/")
+	db, err := sql.Open("mysql", "root:root@tcp(172.17.0.2:3306)/")
 	//mysql - pasta / root - senha
 	if err != nil {
 		panic(err)

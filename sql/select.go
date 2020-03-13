@@ -12,7 +12,7 @@ type usuario struct {
 }
 
 func main() {
-	db, err := sql.Open("mysql","root:12345@/cursogo")
+	db, err := sql.Open("mysql","root:root@tcp(172.17.0.2:3306)/cursogo")
 	if err != nil {
 		log.Fatal(err)
 	}
