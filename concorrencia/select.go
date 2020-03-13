@@ -1,7 +1,7 @@
 package main
 
 import (
-	html "Titulo"
+	html "titulo"
 	"log"
 	"time"
 )
@@ -19,7 +19,7 @@ func oMaisRapido(url1, url2, url3 string) string {
 	case t3 := <- c3:
 		return t3
 	case <-time.After(time.Millisecond * 1000):
-		return "Se f*deu!!!"
+		return "Errou!!!"
 	}
 }
 

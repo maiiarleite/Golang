@@ -1,7 +1,7 @@
 package main
 
 import (
-	html "Titulo"
+	html "titulo"
 	"log"
 )
 func encaminhar(origem <-chan string, destino chan string) {
